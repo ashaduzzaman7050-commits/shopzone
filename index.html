@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarazClone - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <span class="welcome-text">Welcome to DarazClone - Shop Smart, Save More!</span>
+                <div class="top-links">
+                    <a href="#" class="download-app">
+                        <i class="fas fa-download"></i> Download App
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navbar -->
+        <nav class="navbar" id="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <a href="#" class="logo">
+                        <img src="https://via.placeholder.com/120x40/FF6B35/FFFFFF?text=DARAZ" alt="Daraz Logo">
+                    </a>
+                </div>
+                
+                <div class="search-container">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search in DarazClone...">
+                        <button class="search-btn" id="searchBtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="nav-actions">
+                    <a href="#" class="nav-link login-btn">
+                        <i class="fas fa-user"></i>
+                        Login
+                    </a>
+                    <a href="#" class="nav-link signup-btn">
+                        <i class="fas fa-user-plus"></i>
+                        Signup
+                    </a>
+                    <a href="#" class="nav-link cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="mobile-menu-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <h3>Menu</h3>
+            <i class="fas fa-times close-menu" id="closeMobile"></i>
+        </div>
+        <ul class="mobile-menu-list">
+            <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i> Electronics</a></li>
+            <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+            <li><a href="#"><i class="fas fa-home"></i> Home & Living</a></li>
+            <li><a href="#"><i class="fas fa-dumbbell"></i> Sports</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-wrapper">
+                <!-- Category Sidebar -->
+                <div class="hero-categories">
+                    <h3><i class="fas fa-list"></i> Categories</h3>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-mobile-alt"></i> Mobiles</a></li>
+                        <li><a href="#"><i class="fas fa-laptop"></i> Electronics</a></li>
+                        <li><a href="#"><i class="fas fa-tshirt"></i> Fashion</a></li>
+                        <li><a href="#"><i class="fas fa-home"></i> Home Living</a></li>
+                        <li><a href="#"><i class="fas fa-gamepad"></i> Gaming</a></li>
+                        <li><a href="#"><i class="fas fa-book"></i> Books</a></li>
+                    </ul>
+                </div>
+
+                <!-- Banner Slider -->
+                <div class="hero-slider">
+                    <div class="slider-container" id="slider">
+                        <div class="slide active">
+                            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=1200&h=500&fit=crop" alt="Banner 1">
+                            <div class="slide-content">
+                                <h2>Up to 70% OFF</h2>
+                                <p>Biggest Electronics Sale</p>
+                                <a href="#" class="cta-btn">Shop Now</a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=500&fit=crop" alt="Banner 2">
+                            <div class="slide-content">
+                                <h2>Fashion Revolution</h2>
+                                <p>Latest Trends at Best Prices</p>
+                                <a href="#" class="cta-btn">Explore</a>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=1200&h=500&fit=crop" alt="Banner 3">
+                            <div class="slide-content">
+                                <h2>Home Essentials</h2>
+                                <p>Everything for your home</p>
+                                <a href="#" class="cta-btn">Shop Home</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-nav">
+                        <span class="nav-dot active" data-slide="0"></span>
+                        <span class="nav-dot" data-slide="1"></span>
+                        <span class="nav-dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobiles</h3>
+                    <p>Latest Smartphones</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>TV, Audio & More</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Fashion</h3>
+                    <p>Men & Women</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Home Living</h3>
+                    <p>Furniture & Decor</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Gaming</h3>
+                    <p>Consoles & Games</p>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Books</h3>
+                    <p>Best Sellers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flash Sale Section -->
+    <section class="flash-sale">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">🔥 Flash Sale</h2>
+                <div class="sale-timer">
+                    <span class="time-item"><span id="hours">04</span>H</span>
+                    <span class="time-item"><span id="minutes">59</span>M</span>
+                    <span class="time-item"><span id="seconds">30</span>S</span>
+                </div>
+            </div>
+            <div class="products-grid" id="flashProducts">
+                <!-- Flash sale products will be populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Popular Products</h2>
+            <div class="section-tabs">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="electronics">Electronics</button>
+                <button class="tab-btn" data-tab="fashion">Fashion</button>
+                <button class="tab-btn" data-tab="home">Home</button>
+            </div>
+            <div class="products-grid" id="popularProducts">
+                <!-- Popular products will be populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal-content">
+            <div class="cart-header">
+                <h3>My Cart</h3>
+                <i class="fas fa-times close-cart" id="closeCart"></i>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p>Your cart is empty</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total: $<span id="cartTotal">0</span></span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>DarazClone</h3>
+                    <p>Your trusted online shopping destination for everything you need.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Care</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">How to Buy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Shop by Category</h4>
+                    <ul>
+                        <li><a href="#">Mobiles</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Fashion</a></li>
+                        <li><a href="#">Home & Living</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <ul>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Daraz Blog</a></li>
+                        <li><a href="#">Sell on Daraz</a></li>
+                        <li><a href="#">Investor Relations</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DarazClone. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
